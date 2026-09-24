@@ -2,6 +2,7 @@ const form = document.getElementById('formAtividade');
 const input = document.getElementById('inputAtividade');
 const lista = document.getElementById('listaAtividades');
 
+const resumoTarefas = document.getElementById("resumoTarefas");
 const totalAtividades = document.getElementById('totalAtividades');
 const totalPendentes = document.getElementById('totalPendentes');
 const totalConcluidas = document.getElementById('totalConcluidas');
@@ -144,6 +145,9 @@ function atualizarEstatisticas() {
   totalPendentes.textContent = pendentes;
 
   totalConcluidas.textContent = concluidas;
+
+  resumoTarefas.textContent =
+  `Você ainda possui ${pendentes} atividade(s) pendente(s).`;
 }
 
 form.addEventListener('submit', function (event) {
