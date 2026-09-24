@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="logo-icon">T</div>
+        <span>TaskFlow</span>
+      </div>
+
+      <nav class="menu">
+
+        <button class="menu-item active">
+          <span class="menu-icon">⌂</span>
+          Hoje
+        </button>
+
+        <button class="menu-item">
+          <span class="menu-icon">✓</span>
+          Concluídas
+        </button>
+
+        <button class="menu-item">
+          <span class="menu-icon">○</span>
+          Pendentes
+        </button>
+
+      </nav>
+
+      <div class="sidebar-footer">
+
+        <div class="user">
+
+          <div class="avatar">
+            L
+          </div>
+
+          <div>
+            <strong>Lucas</strong>
+            <span>Minha conta</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <main class="main">
+
+      <header class="header">
+
+        <div>
+          <span class="date">MINHAS ATIVIDADES</span>
+          <h1>Organize o seu dia.</h1>
+
+          <p>
+            Mantenha o foco no que realmente importa.
+          </p>
+        </div>
+
+        <div class="header-actions">
+
+          <button class="icon-button">
+            ☼
+          </button>
+
+          <button class="profile-button">
+            L
+          </button>
+
+        </div>
+
+      </header>
+
+
+      <section class="stats">
+
+        <div class="stat-card">
+
+          <div class="stat-icon purple">
+            ◎
+          </div>
+
+          <div>
+            <span>Total</span>
+            <strong id="totalAtividades">0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon orange">
+            ○
+          </div>
+
+          <div>
+            <span>Pendentes</span>
+            <strong id="totalPendentes">0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <div class="stat-icon green">
+            ✓
+          </div>
+
+          <div>
+            <span>Concluídas</span>
+            <strong id="totalConcluidas">0</strong>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section class="task-section">
+
+        <div class="section-top">
+
+          <div>
+            <h2>Atividades</h2>
+            <p>Suas tarefas de hoje</p>
+          </div>
+
+          <button
+            class="add-button"
+            onclick="focarInput()"
+          >
+            <span>+</span>
+            Nova atividade
+          </button>
+
+        </div>
+
+
+        <form id="formAtividade" class="task-form">
+
+          <div class="input-wrapper">
+
+            <span class="input-icon">+</span>
+
+            <input
+              id="inputAtividade"
+              type="text"
+              placeholder="O que você precisa fazer?"
+              autocomplete="off"
+            />
+
+          </div>
+
+          <button type="submit">
+            Adicionar
+          </button>
+
+        </form>
+
+
+        <div class="filters">
+
+          <button
+            class="filter active"
+            data-filter="todas"
+          >
+            Todas
+          </button>
+
+          <button
+            class="filter"
+            data-filter="pendentes"
+          >
+            Pendentes
+          </button>
+
+          <button
+            class="filter"
+            data-filter="concluidas"
+          >
+            Concluídas
+          </button>
+
+        </div>
+
+
+        <div
+          id="listaAtividades"
+          class="task-list"
+        ></div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
